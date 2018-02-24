@@ -1,0 +1,53 @@
+#navbar_table
+{
+    list-style-type: none;
+}
+
+#navbar_table li
+{
+    font-family: 'Press Start 2P', cursive;
+
+    padding: 10px 10px 10px 10px;
+    margin: 10px 20px 0px -20px;
+}
+
+#navbar_table li a
+{
+    color: white;
+}
+
+#navbar_table li a:hover
+{
+    
+}
+
+#navbar_table li:hover
+{
+    background-color: green;
+
+}
+
+.sidebar
+{
+    background-color: black;
+    position: fixed;
+    height: 100vh;
+}
+
+/* for centering sidebar element */
+.contentCentered {
+    text-align: center;
+}
+
+.contentCentered::before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -.25em;
+}
+
+.contentCentered > * {
+    display: inline-block;
+    vertical-align: middle;
+}
