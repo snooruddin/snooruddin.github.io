@@ -14,17 +14,12 @@
 #navbar_table li a
 {
     color: white;
-}
-
-#navbar_table li a:hover
-{
-    
+    text-decoration: none;
 }
 
 #navbar_table li:hover
 {
     background-color: green;
-
 }
 
 .sidebar
@@ -51,3 +46,21 @@
     display: inline-block;
     vertical-align: middle;
 }
+
+#displayArea
+{
+    height: 100vh;
+    float: right;
+    background-color: whitesmoke;
+}
+.button_bar
+{
+    float: left;
+}
+
+.fa-envelope-square, .fa-facebook-square, .fa-github
+{
+    font-size: 30px;
+    color: white;
+}
+
