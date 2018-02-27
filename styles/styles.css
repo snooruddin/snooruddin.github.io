@@ -52,6 +52,9 @@
     height: 100vh;
     float: right;
     background-color: whitesmoke;
+    max-height: 100vh;
+    overflow: scroll;
+    padding-left: 0px;
 }
 .button_bar
 {
