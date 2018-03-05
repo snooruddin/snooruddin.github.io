@@ -31,13 +31,21 @@
     <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 
     <!-- prism css -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.11.0/prism.min.js">
+    <link rel="stylesheet" href="../styles/prism.css">
 
+    <style>
+        h4 {
+            color: darkred;
+        }
+
+        span {
+            color: red;
+        }
+    </style>
 
     <link rel="stylesheet" type="text/css" href="../styles/navbar_style.css">
-    <link rel="stylesheet" type="text/css" href="../styles/tutorial_style.css">
 
-    <title> Tutorials </title>
+    <title> Tutorial || PLSQL Part 1 </title>
 
 </head>
 <body>
@@ -48,9 +56,9 @@
         <div class="col-xs-2 sidebar contentCentered">
             <ul id="navbar_table">
                 <li><a href="../index.html"> Home </a></li>
-                <li><a href="tutorials.html"> Tutorials </a></li>
-                <li><a href="ramblings.html"> Ramblings </a></li>
-                <li><a href="about_me.html"> About Me </a></li>
+                <li><a href="../pages/tutorials.html"> Tutorials </a></li>
+                <li><a href="../pages/ramblings.html"> Ramblings </a></li>
+                <li><a href="../pages/about_me.html"> About Me </a></li>
                 <li class="button_bar"><a href="https://github.com/imad062" target="_blank"> <i
                         class="fab fa-github"></i> </a></li>
                 <li class="button_bar"><a
@@ -63,18 +71,22 @@
         </div>
 
 
-        <div id="displayArea" class="col-xs-10">
+        <div id="displayArea" class="col-xs-10" style="font-family: monospace">
             <!-- write everything here -->
-            <h2 class="topic_title"> Javascript </h2>
-            <ul class="topics">
-                <li> <a href="../posts/variables_opearators.html"> Variables & Operators </a> </li>
-            </ul>
-
-            <h2 class="topic_title"> PLSQL / Oracle DBMS</h2>
-            <ul class="topics">
-                <li> <a href="../posts/plsql_basics_part1.html"> PLSQL part 1 </a></li>
-            </ul>
-
+            <h4> PL/SQL </h4>
+            <p> I use Oracle DBMS 11g express edition. In Oracle DBMS PL/SQL is a procedural language extension to SQL. It is different from SQL, but the basics are same. </p><br>
+            <h4> Creating a user and Granting permission to do stuff </h4>
+            <p> We have to run SQL commands from the "Run SQL commands" terminal. You can find it in Start Menu of Windows. </p>
+            <p> At first we connect to the <span> system </span> account, this is a built in administrator account meaning it can create users, delete users and much more. </p>
+            <pre>
+                <code class="language-sql">
+                    connect system;
+                    -- you create a comment in sql using the dash operator twice
+                    -- this is a comment in sql
+                </code>
+            </pre>
+            <p>This then requires a password. The password is the password you used when setting up the database software. </p>
+            <p></p>
         </div>
 
     </div>
@@ -82,6 +94,6 @@
 
 
 <!-- for prism -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.11.0/prism.min.js"></script>
+<script src="../scripts/prism.js"></script>
 </body>
 </html>
