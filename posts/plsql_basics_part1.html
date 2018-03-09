@@ -80,13 +80,47 @@
             <p> At first we connect to the <span> system </span> account, this is a built in administrator account meaning it can create users, delete users and much more. </p>
             <pre>
                 <code class="language-sql">
-                    connect system;
+                    CONNECT system;
+                    -- sql statements end with a semicolon
                     -- you create a comment in sql using the dash operator twice
                     -- this is a comment in sql
                 </code>
             </pre>
-            <p>This then requires a password. The password is the password you used when setting up the database software. </p>
-            <p></p>
+            <p>This then requires a password. The password is the password you used when setting up the database software. The password is not echoed meaning you cant see the password as you type it. So type carefully. </p>
+            <p> After successful login a user is created like this </p>
+            <pre>
+                <code class="language-sql">
+                    CREATE USER put_username_here IDENTIFIED BY put_password_here;
+                </code>
+            </pre>
+            <p> After successful user creation you need to grant permission to the user so that he can create table and do other stuff. This can be done in two ways. You can either
+            Grant him permissions one by one or you can grant all permission to him at once. Here is a <a href="https://www.techonthenet.com/oracle/grant_revoke.php"> link </a> to all the permissions you can permit to a user.
+            To Give a user all permissions at once: </p>
+            <pre>
+                <code class="language-sql">
+                    GRANT ALL PRIVILEGES TO username_here;
+                </code>
+            </pre>
+            <p> Now that a user with all the permissions have been created, you can disconnect from <span>system</span> and login to the new user. </p>
+            <pre>
+                <code class="language-sql">
+                    DISCONNECT;    -- to disconnect
+                    CONNECT username;    --to login to new user
+                </code>
+            </pre>
+            <p> You have to put the password for the username. </p><br>
+            <h4> Creating a table </h4>
+            <pre>
+                <code class="language-sql">
+                    CREATE TABLE tablename(
+                      col_name1 type constraints,
+                      col_name2 type constraints
+
+                      PRIMARY KEY( col_name_from_this_table ),
+                      FOREIGN KEY( col_name_from_this_table ) REFERENCES table_name( col_name_from_that_table )
+                    )
+                </code>
+            </pre>
         </div>
 
     </div>

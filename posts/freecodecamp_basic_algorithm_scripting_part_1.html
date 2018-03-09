@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width = device-width, initial-scale = 1">
+
+    <!-- used CDNs -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- fonts section -->
+
+    <!-- for navbar -->
+    <link href='https://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
+    <!-- font-family: 'Press Start 2P', cursive; -->
+
+    <link href='https://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
+    <!-- font-family: 'Arvo', serif; -->
+    <link href='https://fonts.googleapis.com/css?family=Cutive+Mono' rel='stylesheet' type='text/css'>
+    <!-- font-family: 'Cutive Mono', monospace; -->
+
+    <!-- fonts section end -->
+
+    <!-- font-awesome -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+
+    <!-- prism css -->
+    <link rel="stylesheet" href="../styles/prism.css">
+
+    <style>
+        h4 {
+            color: darkred;
+        }
+
+        span {
+            color: red;
+        }
+    </style>
+
+    <link rel="stylesheet" type="text/css" href="../styles/navbar_style.css">
+
+    <title> FreeCodeCamp Basic Algorithm Scripting Part 1 </title>
+
+</head>
+<body>
+
+<div class="container-fluid">
+    <div class="row" id="navrow">
+
+        <div class="col-xs-2 sidebar contentCentered">
+            <ul id="navbar_table">
+                <li><a href="../index.html"> Home </a></li>
+                <li><a href="../pages/tutorials.html"> Tutorials </a></li>
+                <li><a href="../pages/ramblings.html"> Ramblings </a></li>
+                <li><a href="../pages/about_me.html"> About Me </a></li>
+                <li class="button_bar"><a href="https://github.com/imad062" target="_blank"> <i
+                        class="fab fa-github"></i> </a></li>
+                <li class="button_bar"><a
+                        href="mailto:https://nooruddinimad@gmail.com?Subject=ContactFromImadsRamblings"> <i
+                        class="fas fa-envelope-square"></i> </a></li>
+                <li class="button_bar"><a href="https://www.facebook.com/nooruddin.imad" target="_blank"> <i
+                        class="fab fa-facebook-square"></i> </a></li>
+            </ul>
+
+        </div>
+
+
+        <div id="displayArea" class="col-xs-10" style="font-family: monospace">
+            <!-- write everything here -->
+            <h4> 1. Reverse a string </h4>
+            <p> There are many ways to solve this. The most basic way to probably solve this is to define a local string. Traverse the Given String from the end to the start and append
+            the characters to the end of the local string</p>
+            <pre>
+                <code class="language-javascript">
+                    function reverseString(str) {
+                        //revStr will hold the reverse String
+                        var revStr = "";
+
+                        //Traversing the string from end to beginning and adding the characters with revStr
+                        for(var i = str.length - 1; i >= 0; i--)
+                        {
+                            revStr += str[i];
+                        }
+
+                        str = revStr;
+                        return str;
+                    }
+
+                    reverseString("hello");
+                </code>
+            </pre>
+            <p> Now we will do this the way fcc wanted, with arrays and built-in-methods. </p>
+            <pre>
+                <code class="language-javascript">
+
+                    function reverseString(str) {
+
+                        // this is called method chaining
+                        // split("") return an array that contains the characters of the string as individual elements
+                        // reverse() reverses the array
+                        // join("") returns a string containing all the elements of the array
+                        str = str.split("").reverse().join("");
+
+                        return str;
+                    }
+
+                    reverseString("Greetings From Earth");
+
+                </code>
+            </pre>
+            <br>
+            <h4> 2. Factorialize a number </h4>
+            <p> This one is preety straight forward. N! = 1 * 2 * 3 * 4 * (N-2) * (N-1) * N .</p>
+            <pre>
+                <code class="language-javascript">
+
+                    function factorialize(num) {
+
+                        // ans will hold the factorization result
+                        var ans = 1;
+
+                        for(var i = 1; i <= num; i++)
+                        {
+                            ans *= i ;
+                        }
+                        num = ans;
+                        return num;
+                    }
+
+                    factorialize(5);
+
+                </code>
+            </pre>
+            <br>
+            <h4> 3. Check For Palindromes </h4>
+            <p> A palindrome is a word that is the same as the reversed word . For example "eye" is a palindrome, As the reverse of "eye" is also "eye".</p>
+            <p> In this particular example fcc wants to convert the entire string into lowercase and get rid of the punctuation, spaces and symbols. Thankfully we have the awesome
+            power of RegExp and built-in methods with us.</p>
+            <pre>
+                <code class="language-javascript">
+                    function palindrome(str) {
+
+                        //toLowerCase() converts the alphabets of a string into lowercase
+                        str = str.toLowerCase();
+
+                        // this regular expression selects all the lowerCase alphabets and digits if any
+                        var reg = /[a-z0-9]/gi;
+
+                        // gets the lowercase alphabets and digits as elements in an array and joins them
+                        //processedStr will contain only lowercase alphabet and digits
+                        var processedStr = str.match(reg).join("");
+
+                        // reverses the processedStr
+                        var revProcessedStr = processedStr.split("").reverse().join("");
+
+                        // checks if the two strings are equal
+                        return revProcessedStr === processedStr;
+                    }
+
+                    palindrome("1 eye for one eye.");
+
+                </code>
+            </pre>
+            <br>
+            <h4> 4. Find the longest word in a string </h4>
+            <p> In this case, we can split the string and record the length of all the words. </p>
+            <p> Then we can find the longest word and return it. </p>
+            <pre>
+                <code class="language-javascript">
+
+                    function findLongestWord(str) {
+
+                        //the maxLen will finally contain the length of the longest word
+                        var maxLen = 0;
+
+                        //split the string whenever a space is found and store the words in a array
+                        var arr =  str.split(/\s/gi);
+
+                        //traverse the entire array and compare with maxLen to find out weather the current word is the longest
+                        for(var i = 0; i < arr.length; i++)
+                        {
+                            if(arr[i].length > maxLen)
+                            maxLen = arr[i].length;
+                        }
+                        return maxLen;
+                    }
+
+                    findLongestWord("The quick brown fox jumped over the lazy dog");
+
+                </code>
+            </pre>
+            <br>
+            <h4> 5. Title case of a sentence </h4>
+            <p> This is by far my most favourite. This problem is tricky as strings in javascript are immutable.</p>
+            <p> Meaning you can't change the string at an index once it has been created. You can however append new characters at end of string.</p>
+            <p> So, every time you want to change the string at an specific index you have to create the entire string with the updated index. </p>
+            <pre>
+                <code class="language-javascript">
+
+                    function titleCase(str) {
+
+                        // fcc wants only first character of every word to be uppercase and every other word lowercase
+                        // it's easier to convert the whole string to lowercase first
+                        str = str.toLowerCase();
+
+                        // split the string into words and store them in the array arr
+                        var arr = str.split(/\s/gi);
+
+                        // traverse the array
+                        for (var i = 0; i < arr.length; i++)
+                        {
+                            //checks if the first character of every word is uppercase of not
+                            if(arr[i][0] != arr[i][0].toUpperCase())
+                             {
+
+                                // if the first character is uppercase letter
+                                // arr[i][0].toUpperCase() takes the first character of the word, makes it uppercase and returns it
+                                // slice(beginIndex, endIndex) slices the string from beginIndex to endIndex
+                                // for example "eye".slice(1,2) returns "y"
+                                // "eye".slice(1) return "ye"
+
+                                arr[i] = arr[i][0].toUpperCase() + arr[i].slice(1);
+                             }
+                        }
+
+                        // join(" ") adds the elements of the array into a string with a whitespace between each element
+                        str = arr.join(" ");
+
+                        return str;
+                    }
+
+                    titleCase("I'm a little tea pot");
+
+                </code>
+            </pre>
+
+        </div>
+
+    </div>
+</div>
+
+
+<!-- for prism -->
+<script src="../scripts/prism.js"></script>
+</body>
+</html>
