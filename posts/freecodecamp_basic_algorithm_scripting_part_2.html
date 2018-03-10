@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width = device-width, initial-scale = 1">
+
+    <!-- used CDNs -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- fonts section -->
+
+    <!-- for navbar -->
+    <link href='https://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
+    <!-- font-family: 'Press Start 2P', cursive; -->
+
+    <link href='https://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
+    <!-- font-family: 'Arvo', serif; -->
+    <link href='https://fonts.googleapis.com/css?family=Cutive+Mono' rel='stylesheet' type='text/css'>
+    <!-- font-family: 'Cutive Mono', monospace; -->
+
+    <!-- fonts section end -->
+
+    <!-- font-awesome -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+
+    <!-- prism css -->
+    <link rel="stylesheet" href="../styles/prism.css">
+
+    <style>
+        h4 {
+            color: darkred;
+        }
+
+        span {
+            color: red;
+        }
+    </style>
+
+    <link rel="stylesheet" type="text/css" href="../styles/navbar_style.css">
+
+    <title> FreeCodeCamp Basic Algorithm Scripting part 2 </title>
+
+</head>
+<body>
+
+<div class="container-fluid">
+    <div class="row" id="navrow">
+
+        <div class="col-xs-2 sidebar contentCentered">
+            <ul id="navbar_table">
+                <li><a href="../index.html"> Home </a></li>
+                <li><a href="../pages/tutorials.html"> Tutorials </a></li>
+                <li><a href="../pages/ramblings.html"> Ramblings </a></li>
+                <li><a href="../pages/about_me.html"> About Me </a></li>
+                <li class="button_bar"><a href="https://github.com/imad062" target="_blank"> <i
+                        class="fab fa-github"></i> </a></li>
+                <li class="button_bar"><a
+                        href="mailto:https://nooruddinimad@gmail.com?Subject=ContactFromImadsRamblings"> <i
+                        class="fas fa-envelope-square"></i> </a></li>
+                <li class="button_bar"><a href="https://www.facebook.com/nooruddin.imad" target="_blank"> <i
+                        class="fab fa-facebook-square"></i> </a></li>
+            </ul>
+
+        </div>
+
+
+        <div id="displayArea" class="col-xs-10" style="font-family: monospace">
+            <!-- write everything here -->
+            <h4> 1. Return Largest number in arrays </h4>
+            <p> So we Have an array that contains more arrays. We have to find the maximum number in each subarray and create a array of all the maximum numbers.</p>
+            <p> This is just a test of nested loops. </p>
+            <pre>
+                <code class="language-javascript">
+
+                    function largestOfFour(arr) {
+
+                        // array containing the answer
+                        var ans = [];
+
+                        // this loop traverses the given array
+                        for(var i = 0; i < arr.length; i++)
+                        {
+
+                            //this holds the maximum for each subarray
+                            var maximum = 0;
+
+                            //this loop traverses each subarray of the given array
+                            for(var j = 0; j < arr[i].length; j++)
+                            {
+
+                                //updating maximum
+                                if(arr[i][j] > maximum )
+                                {
+                                    maximum = arr[i][j];
+                                }
+                            }
+
+                            //pushing the maximum of each subarray into the ans array
+                            ans.push(maximum);
+                        }
+                        return ans;
+                    }
+
+                    largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]);
+
+                </code>
+            </pre>
+            <br>
+            <h4> 2. Confirm the ending </h4>
+            <p> In this case, we have to find weather a given string contains another given string at the ens</p>
+            <p> We cannot use endsWith() as fcc wants us not to. </p>
+            <pre>
+                <code class="language-javascript">
+
+                    function confirmEnding(str, target) {
+
+                        // substr(startIndex, endIndex) is a built-in method that returns the string[startIndex] to not including string[endIndex] in a string.
+                        // "Hello".substr(3, 5) returns "lo" as "Hello"[3] = lo ans "Hello"[5] = ""
+                        // one thing to notice is that string[endIndex] is not included in the resultant string
+                        // substr(startIndex) by defaults returns from string[startIndex] to string[string.length]
+                        var end = str.substr(str.length - target.length);
+
+                        return end === target;
+                    }
+
+                    confirmEnding("Bastian", "n");
+
+                </code>
+            </pre>
+
+            <p> We can also use the endsWith() built-in method </p>
+
+            <pre>
+                <code class="language-javascript">
+                    function func(str, end)
+                    {
+                        return str.endsWith(end);
+                    }
+                    func("bonjour", "ur");
+                </code>
+            </pre>
+            <br>
+            <h4> 3. Repeat a string repeat a string </h4>
+            <p> This is the easiest one. You just run a for loop and add the given string with an empty string. </p>
+            <pre>
+                <code class="language-javascript">
+
+                    function repeatStringNumTimes(str, num) {
+
+                        // ans contains the resultant string
+                        var ans = "";
+
+                        // add the given string with the empty string the given number of times
+                        for(var i = 0; i < num; i++)
+                        {
+                            ans += str;
+                        }
+                        return ans;
+                    }
+
+                    repeatStringNumTimes("abc", 3);
+
+                </code>
+            </pre>
+            <br>
+            <h4> 4. Truncate a string </h4>
+            <p> In this case, we have to truncate the additional parts of a string that exceeds the given length and then add some characters with the string. </p>
+            <p> This is just a case of writing the if-else statements. We have three cases.</p>
+            <p> Case 1: if (string.length < num ) we dont have to truncate anything</p>
+            <p> Case 2: if (string.length > num && num > 3) we have to truncate from index 0 to index num - 3 for adding the "..." string.</p>
+            <p> Case 3: if (string.length > num && num <= 3 ) we have to truncate from index 0 to index num </p>
+            <pre>
+                <code class="language-javascript">
+
+                    function truncateString(str, num) {
+
+                        //case 2
+                        if(str.length > num && num > 3)
+                        {
+
+                            //slice till num - 3 because we have to think about length of "..." in the resultant string
+                            str = str.slice(0, num - 3 ) + "...";
+                            return str;
+                        }
+
+                        //case 3
+                        else if(str.length > num && num <= 3)
+                        {
+
+                            // as num <= 3, we don't have to care about the length of "..." in the resultant string
+                            str = str.slice(0, num) + "...";
+                            return str;
+                        }
+
+                        //case 1
+                        else
+                        {
+                            return str;
+                        }
+                    }
+
+                    truncateString("A-tisket a-tasket A green and yellow basket", 11);
+
+                </code>
+            </pre>
+            <br>
+            <h4> 5. Chunky Monkey </h4>
+            <p> This is another case of simple for loop that increments with size. </p>
+            <p> Basically, we have to slice the array into groups of arrays and push the slices into a resultant array. </p>
+            <pre>
+                <code class="language-javascript">
+
+                    function chunkArrayInGroups(arr, size) {
+
+                        // contains the resultant array
+                        var res = [];
+
+                        // notice the i+=size
+                        // so if slice is 4, the first slice will be 0 to 3 , second will be 4 to 7 and so on
+                        for(var i = 0; i < arr.length; i+= size)
+                        {
+                            // pushing the slices into the resultant array
+                            res.push(arr.slice(i, i+size));
+                        }
+                        return res;
+                    }
+
+                    chunkArrayInGroups(["a", "b", "c", "d"], 2);
+
+                </code>
+            </pre>
+        </div>
+
+    </div>
+</div>
+
+
+<!-- for prism -->
+<script src="../scripts/prism.js"></script>
+</body>
+</html>
