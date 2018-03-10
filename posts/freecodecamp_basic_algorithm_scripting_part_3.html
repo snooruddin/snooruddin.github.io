@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width = device-width, initial-scale = 1">
+
+    <!-- used CDNs -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- fonts section -->
+
+    <!-- for navbar -->
+    <link href='https://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
+    <!-- font-family: 'Press Start 2P', cursive; -->
+
+    <link href='https://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
+    <!-- font-family: 'Arvo', serif; -->
+    <link href='https://fonts.googleapis.com/css?family=Cutive+Mono' rel='stylesheet' type='text/css'>
+    <!-- font-family: 'Cutive Mono', monospace; -->
+
+    <!-- fonts section end -->
+
+    <!-- font-awesome -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+
+    <!-- prism css -->
+    <link rel="stylesheet" href="../styles/prism.css">
+
+    <style>
+        h4 {
+            color: darkred;
+        }
+
+        span {
+            color: red;
+        }
+    </style>
+
+    <link rel="stylesheet" type="text/css" href="../styles/navbar_style.css">
+
+    <title> FreeCodeCamp Basic Algorithm Scripting part 3</title>
+
+</head>
+<body>
+
+<div class="container-fluid">
+    <div class="row" id="navrow">
+
+        <div class="col-xs-2 sidebar contentCentered">
+            <ul id="navbar_table">
+                <li><a href="../index.html"> Home </a></li>
+                <li><a href="../pages/tutorials.html"> Tutorials </a></li>
+                <li><a href="../pages/ramblings.html"> Ramblings </a></li>
+                <li><a href="../pages/about_me.html"> About Me </a></li>
+                <li class="button_bar"><a href="https://github.com/imad062" target="_blank"> <i
+                        class="fab fa-github"></i> </a></li>
+                <li class="button_bar"><a
+                        href="mailto:https://nooruddinimad@gmail.com?Subject=ContactFromImadsRamblings"> <i
+                        class="fas fa-envelope-square"></i> </a></li>
+                <li class="button_bar"><a href="https://www.facebook.com/nooruddin.imad" target="_blank"> <i
+                        class="fab fa-facebook-square"></i> </a></li>
+            </ul>
+
+        </div>
+
+
+        <div id="displayArea" class="col-xs-10" style="font-family: monospace">
+            <!-- write everything here -->
+            <h4> 1. Slasher Flick </h4>
+            <p> In this case, we have to chop elements from the given array. </p>
+            <p> splice() is a built in function that removes elements from array. </p>
+            <pre>
+                <code class="language-javascript">
+
+                    function slasher(arr, howMany) {
+
+                        //splice(startIndex, howManyToSplit) starts from the startIndex and separates as many indicated by the howManyToSplit
+                        // One thing to notice is that splice changes the contents of the array it works on
+                        // splice can be used to both remove and add data to an array
+                        arr.splice(0, howMany);
+                        return arr;
+                    }
+
+                    slasher([1, 2, 3], 2);
+
+                </code>
+            </pre>
+            <p> Another way is to use slice(). slice(startIndex, endIndex) slices an array from the given startIndex to the endIndex and returns and array containing the sliced elements.</p>
+            <p> If no endIndex is given, slice() slices till end Of Array</p>
+            <p> slice() doesn't change the contents of the working array.</p>
+            <pre>
+                <code class="language-javascript">
+
+                    function slasher(arr, howMany) {
+
+                        // slice stats from the index specified by the howMany argument and slices to the end Of array
+                        arr = arr.slice(howMany);
+                        return arr;
+                    }
+
+                    slasher([1, 2, 3], 2);
+                </code>
+            </pre>
+            <br>
+            <h4> 2. Mutations </h4>
+            <p> In this case, we have to find weather all the characters in the second argument string is present in the first argument string.</p>
+            <pre>
+                <code class="language-javascript">
+
+                    function mutation(arr) {
+
+                        // its easy to compare the strings when we don't have to worry about weather the character is uppercase or lowercase
+                        // indexOf(something) returns the index of the first occurrence of "something" in the string its working on
+                        // indexOf() returns -1 if no match is found
+                        arr[0] = arr[0].toLowerCase();
+                        arr[1] = arr[1].toLowerCase();
+
+                        // traverses all the characters of the first string
+                        for(var i = 0; i < arr[1].length; i++)
+                        {
+                            // if one character is not present, return false
+                            if(arr[0].indexOf(arr[1][i]) == -1)
+                            {
+                                return false;
+                            }
+                        }
+
+                        // else every item was present in the first string
+                        return true;
+                    }
+
+                    mutation(["hello", "hey"]);
+
+                </code>
+            </pre>
+            <br>
+            <h4> 3. Falsy Bouncer </h4>
+            <p> In this case, we have to delete all falsy values from an array. Falsy values are 0, null, undefined , false, NaN and "". </p>
+            <pre>
+                <code class="language-javascript">
+                    function bouncer(arr) {
+
+                        // filter() uses a callback function to determine weather a property is true or false for each element of the array
+                        // the boolean object returns false for every falsy elements in the array and thus the falsy elements are cut out.
+                        // filter() doesn't change the contents of the array it is works on
+                        arr = arr.filter(Boolean);
+
+                        return arr;
+                    }
+
+                    bouncer([7, "ate", "", false, 9]);
+
+                </code>
+            </pre>
+            <br>
+            <h4> 4. Seek And Destroy </h4>
+            <p> In this case, we have to seek for the given elements in the arr array and delete them from the arr if found. </p>
+            <pre>
+                <code class="language-javascript">
+                    function destroyer(arr) {
+
+                        // res will contain the resultant array
+                        var res = [];
+
+                        var isDuplicate = false;
+
+                        // traverses each element of the array
+                        for(var i = 0; i < arr.length; i++)
+                        {
+
+                            isDuplicate = false;
+
+                            // traversing all the arguments
+                            // arguments is an array like object that contains all the arguments passed to a function....
+                            // arguments[0] contains the first argument passed to a function
+                            // arguments[1] contains the second argument passed to a function and so on and so forth...
+                            for(var j = 1; j < arguments.length; j++)
+                            {
+                                // if the current element of the arr that is being traversed equals to the current argument,
+                                // we set the isDuplicate to true , so that we don't have to insert it into the res array
+                                if(arr[i] === arguments[j])
+                                {
+                                    isDuplicate = true;
+                                    break;
+                                }
+                            }
+
+                            // if the item in the array is not duplicate, it is inserted into the res array
+                            if(isDuplicate == false)
+                            {
+                                res.push(arr[i]);
+                            }
+                        }
+                        return res;
+                    }
+
+                    destroyer([1, 2, 3, 1, 2, 3], 2, 3);
+
+                </code>
+            </pre>
+            <br>
+            <h4> 5. Where Do I Belong? </h4>
+            <p> Ah... The question of every single human being on earth... </p>
+            <p> This one is about sorting and finding one's place .</p>
+            <pre>
+                <code class="language-javascript">
+
+                    function getIndexToIns(arr, num) {
+
+                        // sort() uses a callback function to sort the item it works on.
+                        // if puts a before b if the function returns negative results
+                        // it puts b before a if the function returns positive results
+                        // it puts a before b if the function returns 0
+
+                        //in this case we want to sort an array in ascending order.
+                        // The following comparator function returns positive if a > b,then the sort() function puts b before a
+                        // returns negative if b > a, so sort() puts a before b
+                        function ascendingSortHelper(a,b)
+                        {
+                            return a - b;
+                        }
+
+                        // adding the new number to array
+                        arr.push(num);
+
+                        // sorting using the comparator function
+                        // sort() changes the array it works on
+                        arr.sort(ascendingSortHelper);
+
+                        // returning the index of the first occurrence of the num
+                        return arr.indexOf(num);
+                    }
+
+                    getIndexToIns([40, 60], 50);
+
+                </code>
+            </pre>
+            <br>
+            <h4> 6. Caesars Cipher </h4>
+            <p> Caesars cipher is basically a rotating cipher. Meaning, Case 1: if the ASCII CODE of the character is less than 78 you have to add 13 with the ASCII CODE to decipher. </p>
+            <p> Else ,Case 2:  you just have to subtract 13 from the character ASCII CODE. </p>
+            <pre>
+                <code class="language-javascript">
+
+                    function rot13(str) {
+
+                        // will contain the resultant string
+                        var res = "";   // LBH QVQ VG!
+
+                        // traverses the string
+                        for(var i = 0; i < str.length; i++)
+                        {
+                            // charCodeAt() returns the ASCII CODE of a character
+                            // The problem specified that all the string will be uppercase
+                            if(str.charCodeAt(i) >= 65 && str.charCodeAt(i) <= 90 )
+                            {
+                                //Case 1
+                                if(str.charCodeAt(i) < 78)
+                                {
+
+                                    // fromCharCode() builds a string from the given ASCII CODE
+                                    // It operates on the Built-in String Object
+                                    res += String.fromCharCode( str.charCodeAt(i) + 13);
+                                }
+
+                                //Case 2
+                                else
+                                {
+                                    res += String.fromCharCode( str.charCodeAt(i) - 13);
+                                }
+                            }
+                            //If other symbols, ignore
+                            else
+                            {
+                                res += str[i];
+                            }
+                        }
+                        return res;
+                    }
+
+                    // Change the inputs below to test
+                    rot13("LBH QVQ VG!");
+
+                </code>
+            </pre>
+
+            <h4> YAYYY!!! I DID IT. </h4>
+            <p> It Was very fun to solve these basic scripting problems. These problems were not hard for me because I have a good background in C and logical approaches to solve problems is not a foreign idea to me.</p>
+            <p> However, this helped me to start a very good habit. I started to read the docs for the first the YAYYY!!! Hope I continue reading the docs. Javascript docs are really well written.</p>
+            <p> See You, Space Cowboy. Until Next Time. </p>
+        </div>
+
+    </div>
+</div>
+
+
+<!-- for prism -->
+<script src="../scripts/prism.js"></script>
+</body>
+</html>
