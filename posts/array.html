@@ -31,13 +31,22 @@
     <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 
     <!-- prism css -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.11.0/prism.min.js">
+    <link rel="stylesheet" href="../styles/prism.css">
 
+    <style>
+        h4 {
+            color: darkred;
+        }
+
+        span {
+            color: red;
+        }
+    </style>
 
     <link rel="stylesheet" type="text/css" href="../styles/navbar_style.css">
-    <link rel="stylesheet" type="text/css" href="../styles/tutorial_style.css">
 
-    <title> Tutorials </title>
+    <title> Array in Javascript Docs</title>
+
 
 </head>
 <body>
@@ -48,9 +57,9 @@
         <div class="col-xs-2 sidebar contentCentered">
             <ul id="navbar_table">
                 <li><a href="../index.html"> Home </a></li>
-                <li><a href="tutorials.html"> Tutorials </a></li>
-                <li><a href="ramblings.html"> Ramblings </a></li>
-                <li><a href="about_me.html"> About Me </a></li>
+                <li><a href="../pages/tutorials.html"> Tutorials </a></li>
+                <li><a href="../pages/ramblings.html"> Ramblings </a></li>
+                <li><a href="../pages/about_me.html"> About Me </a></li>
                 <li class="button_bar"><a href="https://github.com/imad062" target="_blank"> <i
                         class="fab fa-github"></i> </a></li>
                 <li class="button_bar"><a
@@ -63,30 +72,9 @@
         </div>
 
 
-        <div id="displayArea" class="col-xs-10">
+        <div id="displayArea" class="col-xs-10" style="font-family: monospace">
             <!-- write everything here -->
-            <h2 class="topic_title"> FreeCodeCamp Basic Algorithm Scripting </h2>
-            <ul class="topics">
-                <li> <a href="../posts/freecodecamp_basic_algorithm_scripting_part_1.html"> Part 1 </a> </li>
-                <li> <a href="../posts/freecodecamp_basic_algorithm_scripting_part_2.html"> Part 2 </a> </li>
-                <li> <a href="../posts/freecodecamp_basic_algorithm_scripting_part_3.html"> Part 3 (end) </a> </li>
 
-            </ul>
-
-            <h2 class="topic_title"> FreeCodeCamp Intermediate Algorithm Scripting </h2>
-            <ul class="topics">
-                <li> <a href="../posts/freecodecamp_intermediate_algorithm_scripting_part_1.html"> Part 1 </a> </li>
-            </ul>
-
-            <h2 class="topic_title"> Javascript Docs Review </h2>
-            <ul class="topics">
-                <li> <a href="../posts/array.html"> Variables & Operators </a> </li>
-            </ul>
-
-            <h2 class="topic_title"> PLSQL / Oracle DBMS</h2>
-            <ul class="topics">
-                <li> <a href="../posts/plsql_basics_part1.html"> PLSQL part 1 </a></li>
-            </ul>
 
         </div>
 
@@ -95,6 +83,6 @@
 
 
 <!-- for prism -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.11.0/prism.min.js"></script>
+<script src="../scripts/prism.js"></script>
 </body>
 </html>
