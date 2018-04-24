@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width = device-width, initial-scale = 1">
+
+    <!-- used CDNs -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- fonts section -->
+
+    <!-- for navbar -->
+    <link href='https://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
+    <!-- font-family: 'Press Start 2P', cursive; -->
+
+    <link href='https://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
+    <!-- font-family: 'Arvo', serif; -->
+    <link href='https://fonts.googleapis.com/css?family=Cutive+Mono' rel='stylesheet' type='text/css'>
+    <!-- font-family: 'Cutive Mono', monospace; -->
+
+    <!-- fonts section end -->
+
+    <!-- font-awesome -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+
+    <!-- prism css -->
+    <link rel="stylesheet" href="../styles/prism.css">
+
+    <style>
+        h4 {
+            color: darkred;
+        }
+        h5 {
+            font-style: italic;
+            font-weight: bold;
+        }
+        span {
+            color: red;
+        }
+    </style>
+
+    <link rel="stylesheet" type="text/css" href="../styles/navbar_style.css">
+
+    <title> ReGex A to Z </title>
+
+</head>
+<body>
+
+<div class="container-fluid">
+    <div class="row" id="navrow">
+
+        <div class="col-xs-2 sidebar contentCentered">
+            <ul id="navbar_table">
+                <li><a href="../index.html"> Home </a></li>
+                <li><a href="../pages/tutorials.html"> Tutorials </a></li>
+                <li><a href="../pages/ramblings.html"> Ramblings </a></li>
+                <li><a href="../pages/about_me.html"> About Me </a></li>
+                <li class="button_bar"><a href="https://github.com/imad062" target="_blank"> <i
+                        class="fab fa-github"></i> </a></li>
+                <li class="button_bar"><a
+                        href="mailto:https://nooruddinimad@gmail.com?Subject=ContactFromImadsRamblings"> <i
+                        class="fas fa-envelope-square"></i> </a></li>
+                <li class="button_bar"><a href="https://www.facebook.com/nooruddin.imad" target="_blank"> <i
+                        class="fab fa-facebook-square"></i> </a></li>
+            </ul>
+
+        </div>
+
+
+        <div id="displayArea" class="col-xs-10" style="font-family: monospace">
+            <!-- write everything here -->
+            <p> Regular expressions are strings that are used to match and manipulate text. Regular expressions are a language by itself and in most languages, regular expressions support is provided. </p>
+            <p> We will talk about regular expressions in general first and then talk about javascript functions and objects that deal with regular expressions. </p><br>
+            <h4> String.prototype.match() and writing a regular expression in javascript </h4>
+            <p> The ways to create regex in javascript are as follows: </p>
+            <pre>
+                <code class="language-javascript">
+                    var reg = / expression /flags;
+                    // you write the matching expression in between <span> / </span> and <span> / </span>
+                    // use flags after the last <span> / </span>
+                    // for example /[A-Z]/gi is a valid regex\
+
+                    //another way
+                    var reg = new RegExp('pattern' 'flags');
+                    //for example
+                    var reg1 = new RegExp('ab+c','gi');
+                </code>
+            </pre>
+            <p> There are five flags that are supported in javascript: g, i, m, u, y. </p>
+            <ul>
+                <li> <p> <span> g </span> : global search, the search doesn't end after finding just one match. </p> </li>
+                <li> <p> <span> i </span> : case-insensitive-search </p></li>
+                <li> <p> <span> m </span> : searches in multiline string </p></li>
+                <li> <p> <span> u </span> : treats the string as a sequence of unicode code points </p></li>
+                <li> <p> <span> y </span> : performs a "sticky" search that matches starting at the current position in the target string.</p></li>
+            </ul>
+            <p> We are primarily gonna use the <span>match()</span> function of the String object. match() takes a regex as a parameter and returns the results in an array.</p>
+            <pre>
+                <code class="language-javascript">
+                    var reg = /[A-Z]/g;
+                    var str = "Hello Regex";
+                    console.log( str.match(reg) ); //["H", "R"]
+                </code>
+            </pre>
+            <p> Enough JS for now, lets dive into regex basics. </p>
+            <br>
+            <h4> Matching Single Characters </h4>
+            <ol>
+                <li>
+                    <h5> Matching Literal text : </h5>
+                    <p> You can search for a literal character or word using regular expression. </p>
+                    <pre>
+                        <code class="language-javascript">
+                            var str = "My name is Imad and my house in lalaland. My dog loves my cat";
+
+                            //we are gonna write a regex to get 'my' from the string
+                            var reg = /my/;
+                            str.match(reg) // ["my", index: 20, input: "My name is Imad and my house in lalaland. My dog loves my cat", groups: undefined]
+
+                            //you can notice that "My" were not matched, only "my" from the 20 index was returned
+                            //you can also notice that the operation returned after the first match
+                        </code>
+                    </pre>
+                    <p> So, regex is case-sensitive. The above example also showed that the function returned the first instance of the match. </p>
+                    <p> Here, the flags in javascript comes to play. You can use <span> g </span> flag to search the entire string and return all possible matches. </p>
+                    <pre>
+                        <code class="language-javascript">
+                            var str = "My name is Imad and my house in lalaland. My dog loves my cat";
+
+                            var reg = /my/g   //notice the g flag
+
+                            str.match(reg)  // ['my', 'my']
+
+                            //the function returns two matches because the <span> g </span> which means "global" flag was used.
+                        </code>
+                    </pre>
+                    <p> To match the Uppercase "My", you can force the regex engine to be case-insensitive by using the <span> i </span> flag. </p>
+                    <pre>
+                        <code class="language-javascript">
+                            var str = "My name is Imad and my house in lalaland. My dog loves my cat";
+
+                            var reg = /my/gi   //notice the g and i flag
+
+                            str.match(reg)  // ["My", "my", "My", "my"]
+
+                            //notice how the regex is now case insensitive and returns both uppercase and lowercase words
+                        </code>
+                    </pre>
+                    <p> Thus the search results can be manipulated using the flags. </p>
+                </li>
+                <li>
+                    <h5> Matching any character or the universe </h5>
+                    <p> The DOT(.) operator matches every character even itself. The <span> . </span> is super powerful. </p>
+                    <pre>
+                        <code class="language-javascript">
+                            var str = "I eat rice";
+
+                            var reg = /./gi ;
+
+                            str.match(reg) //["I", " ", "e", "a", "t", " ", "r", "i", "c", "e"]
+                            //notice how the dot(.) has matched even the spaces in the string
+
+
+                            var str = "A man walked a dog";
+
+                            //this regex will match any word that has some characters before "a" and some characters after "a"
+                            var reg = /.a./gi;
+
+                            str.match(reg) // ["man", "wal", " a "]
+                            //notice how the regex has matched " a "
+                            //because the dot operator can catch spaces too
+
+                        </code>
+                    </pre>
+                    <p> So now the question is how can you match a dot(.) in a sentence. </p>
+                </li>
+                <li>
+                    <h5> Matching Special Characters </h5>
+                    <p> The dot(.) is a special character of regex that matches any other character. So, to match dot(.) in a string you have to use a special character to escape the dot. </p>
+                    <p> The backSlash(\) is an escape character in Regular expressions. You use <span> \ </span> to escape any special character. </p>
+                    <pre>
+                        <code class="language-javascript">
+                            var str = "slasher.xls";
+
+                            //we want to match only the dot in the string
+                            //so we escaped the special character . using the \
+                            var reg = /\./gi;
+
+                            str.match(reg) // ["."]
+                        </code>
+                    </pre>
+                </li>
+            </ol>
+            <br>
+            <h4> Matching sets of characters </h4>
+        </div>
+
+    </div>
+</div>
+
+
+<!-- for prism -->
+<script src="../scripts/prism.js"></script>
+</body>
+</html>
