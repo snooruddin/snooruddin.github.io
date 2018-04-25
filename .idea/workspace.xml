@@ -5,9 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4d96fb75-45ae-41f3-bff7-8a41019b305b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dictionaries/Nooruddin_Imad.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/posts/array_js.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/posts/array.html" afterPath="$PROJECT_DIR$/posts/regex_a_z.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/files/python_with_mit_ocw_2016/ps1/MIT6_0001F16_ps1.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/files/python_with_mit_ocw_2016/ps2/MIT6_0001F16_Pset2.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/files/python_with_mit_ocw_2016/ps3/MIT6_0001F16_ProblemSet3.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/files/python_with_mit_ocw_2016/ps4/MIT6_0001F16_Pset4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/files/python_with_mit_ocw_2016/ps5/MIT6_0001F16_ps5.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/files/python_with_mit_ocw_2016/ps2/hangman.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/files/python_with_mit_ocw_2016/ps2/words.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/files/python_with_mit_ocw_2016/ps3/ps3.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/files/python_with_mit_ocw_2016/ps3/test_ps3.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/files/python_with_mit_ocw_2016/ps3/words.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/files/python_with_mit_ocw_2016/ps4/ps4a.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/files/python_with_mit_ocw_2016/ps4/ps4b.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/files/python_with_mit_ocw_2016/ps4/ps4c.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/files/python_with_mit_ocw_2016/ps4/story.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/files/python_with_mit_ocw_2016/ps4/words.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/files/python_with_mit_ocw_2016/ps5/feedparser.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/files/python_with_mit_ocw_2016/ps5/mtTkinter.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/files/python_with_mit_ocw_2016/ps5/project_util.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/files/python_with_mit_ocw_2016/ps5/ps5.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/files/python_with_mit_ocw_2016/ps5/ps5_test.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/files/python_with_mit_ocw_2016/ps5/triggers.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/tutorials.html" afterPath="$PROJECT_DIR$/pages/tutorials.html" />
     </list>
@@ -45,11 +63,41 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tutorials.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="tutorials.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pages/tutorials.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1890">
-              <caret line="90" column="74" lean-forward="false" selection-start-line="90" selection-start-column="74" selection-end-line="90" selection-end-column="74" />
+            <state relative-caret-position="-845">
+              <caret line="45" column="28" lean-forward="true" selection-start-line="45" selection-start-column="28" selection-end-line="45" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="home_background.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/styles/home_background.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="462">
+              <caret line="22" column="23" lean-forward="false" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="navbar_style.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/styles/navbar_style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1344">
+              <caret line="64" column="19" lean-forward="false" selection-start-line="64" selection-start-column="19" selection-end-line="64" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tutorial_style.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/styles/tutorial_style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="12" lean-forward="false" selection-start-line="0" selection-start-column="12" selection-end-line="0" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -65,10 +113,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="regex_a_z.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="regex_a_z.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/posts/regex_a_z.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="334">
+            <state relative-caret-position="4095">
               <caret line="195" column="51" lean-forward="false" selection-start-line="195" selection-start-column="51" selection-end-line="195" selection-end-column="51" />
               <folding />
             </state>
@@ -125,7 +173,6 @@
         <option value="$PROJECT_DIR$/pages/home.html" />
         <option value="$PROJECT_DIR$/pages/ramblings.html" />
         <option value="$PROJECT_DIR$/pages/about_me.html" />
-        <option value="$PROJECT_DIR$/styles/navbar_style.css" />
         <option value="$PROJECT_DIR$/styles/home_background.css" />
         <option value="$PROJECT_DIR$/styles/tutorial_style.css" />
         <option value="$PROJECT_DIR$/posts/basic_javascript.html" />
@@ -139,8 +186,9 @@
         <option value="$PROJECT_DIR$/posts/freecodecamp_intermediate_algorithm_scripting_part_1.html" />
         <option value="$PROJECT_DIR$/posts/array.html" />
         <option value="$PROJECT_DIR$/posts/array_js.html" />
-        <option value="$PROJECT_DIR$/pages/tutorials.html" />
         <option value="$PROJECT_DIR$/posts/regex_a_z.html" />
+        <option value="$PROJECT_DIR$/styles/navbar_style.css" />
+        <option value="$PROJECT_DIR$/pages/tutorials.html" />
       </list>
     </option>
   </component>
@@ -170,7 +218,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -178,6 +225,11 @@
             <path>
               <item name="imad062.github.io" type="b2602c69:ProjectViewProjectNode" />
               <item name="imad062.github.io" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="imad062.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="imad062.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="files" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="imad062.github.io" type="b2602c69:ProjectViewProjectNode" />
@@ -197,12 +249,18 @@
             <path>
               <item name="imad062.github.io" type="b2602c69:ProjectViewProjectNode" />
               <item name="imad062.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="scripts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="imad062.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="imad062.github.io" type="462c0819:PsiDirectoryNode" />
               <item name="styles" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -212,6 +270,11 @@
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="settings.editor.selected.configurable" value="fileTemplates" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Admin\Desktop\My Website\imad062.github.io\files\python_with_mit_ocw_2016" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -265,7 +328,10 @@
       <workItem from="1522074205876" duration="599000" />
       <workItem from="1522951165214" duration="608000" />
       <workItem from="1524144539965" duration="652000" />
-      <workItem from="1524577069631" duration="13000" />
+      <workItem from="1524577069631" duration="1308000" />
+      <workItem from="1524585394343" duration="79000" />
+      <workItem from="1524671500948" duration="486000" />
+      <workItem from="1524673584161" duration="1431000" />
     </task>
     <task id="LOCAL-00001" summary="completed sidebar and created icons bar">
       <created>1519670258884</created>
@@ -278,7 +344,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="108886000" />
+    <option name="totallyTimeSpent" value="112177000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -346,14 +412,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pages/tutorials.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="903">
-          <caret line="43" column="0" lean-forward="true" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/about_me.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1323">
@@ -561,20 +619,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/styles/home_background.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="22" column="23" lean-forward="false" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/styles/navbar_style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="461">
-          <caret line="55" column="21" lean-forward="false" selection-start-line="55" selection-start-column="21" selection-end-line="55" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/about_me.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1323">
@@ -585,36 +629,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/posts/basic_javascript.html" />
     <entry file="file://$PROJECT_DIR$/posts/PLSQL/Oracle DBMS.html" />
-    <entry file="file://$PROJECT_DIR$/styles/tutorial_style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="12" lean-forward="false" selection-start-line="0" selection-start-column="12" selection-end-line="0" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1071">
-          <caret line="51" column="51" lean-forward="false" selection-start-line="51" selection-start-column="51" selection-end-line="51" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/posts/variables_opearators.html" />
     <entry file="file://$PROJECT_DIR$/posts/freecodecamp_basic_algorithm_scripting_part_1.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3818">
           <caret line="241" column="0" lean-forward="true" selection-start-line="241" selection-start-column="0" selection-end-line="241" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/posts/plsql_basics_part1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2730">
-          <caret line="130" column="43" lean-forward="false" selection-start-line="130" selection-start-column="43" selection-end-line="130" selection-end-column="43" />
-          <folding>
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -641,6 +660,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/posts/regex_a_z.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4095">
+          <caret line="195" column="51" lean-forward="false" selection-start-line="195" selection-start-column="51" selection-end-line="195" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/posts/array_js.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4557">
@@ -649,18 +676,59 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/tutorials.html">
+    <entry file="file://$PROJECT_DIR$/files/python_with_mit_ocw_2016/ps2/words.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1890">
-          <caret line="90" column="74" lean-forward="false" selection-start-line="90" selection-start-column="74" selection-end-line="90" selection-end-column="74" />
+        <state relative-caret-position="-7182">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1071">
+          <caret line="51" column="51" lean-forward="false" selection-start-line="51" selection-start-column="51" selection-end-line="51" selection-end-column="51" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/posts/regex_a_z.html">
+    <entry file="file://$PROJECT_DIR$/posts/plsql_basics_part1.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="195" column="51" lean-forward="false" selection-start-line="195" selection-start-column="51" selection-end-line="195" selection-end-column="51" />
+        <state relative-caret-position="2730">
+          <caret line="130" column="43" lean-forward="false" selection-start-line="130" selection-start-column="43" selection-end-line="130" selection-end-column="43" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/styles/tutorial_style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="12" lean-forward="false" selection-start-line="0" selection-start-column="12" selection-end-line="0" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/styles/navbar_style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1344">
+          <caret line="64" column="19" lean-forward="false" selection-start-line="64" selection-start-column="19" selection-end-line="64" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/styles/home_background.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="22" column="23" lean-forward="false" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/tutorials.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-845">
+          <caret line="45" column="28" lean-forward="true" selection-start-line="45" selection-start-column="28" selection-end-line="45" selection-end-column="28" />
           <folding />
         </state>
       </provider>
