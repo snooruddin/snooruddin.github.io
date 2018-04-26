@@ -46,10 +46,7 @@
 
         <link rel="stylesheet" type="text/css" href="../styles/navbar_style.css">
 
-        <!-- TODO: set title -->
-        <title></title>
-
-        <!-- TODO: set the link in tutorial page -->
+        <title> Python Lecture 1-3 </title>
 
     </head>
     <body>
@@ -73,7 +70,48 @@
 
                 <div id="displayArea" class="col-xs-10" style="font-family: monospace">
                     <!-- write everything here -->
+                    <h4> Objects & Numerical types </h4>
+                    <p> Objects are the core things of python. Every object has a type that defines the set of things that can be done with the instance of that object. </p>
+                    <p> Types are either scalar or non-scalar. Scalar objects are indivisible. Python has four types of scalar objects: </p>
+                    <ul>
+                        <li><span>int</span> represents integer. E.g. 50, -40 etc. </li>
+                        <li><span>bool</span> represents Boolean values <span>True</span> and <span>False</span></li>
+                        <li><span>float</span> represents real numbers e.g. 4.56, -3.1414 etc.</li>
+                        <li><span>None</span> represents the absence of a value</li>
+                    </ul>
+                    <p> Strings are an example of a non-scalar object.</p>
+                    <br>
+                    <h4> Variables & comments</h4>
+                    <p>Unline C/C++, you don't have to declare the type of a variable during initialization. Python automatically understands the type of the variable.</p>
+                    <pre>
+                        <code class="language-python">
+                            #this is a single line comment in python
+                            #python has no declared multiline comment
+                            #but you can technically use """ as a multiline comment
+                            """
+                            This is the first line of a multiline comment
+                            This is the second line of a multiline comment
+                            """
+                            #the above triple string thing is actually for "docstring" which is used to describe functions
+                            #So you are probably gonna see more # in professional projects
 
+                            #variable declaration
+                            i = 3
+                            j = 4
+                            j = "i am sparta!"
+                            #So, even though the initial type assigned to j is an integer, you can later assign a string to j
+                            j = True
+                            j = False
+                            #Another thing to notice is that, unlike C/C++, you dont have to enter a semicolon after each statement
+                        </code>
+                    </pre>
+                    <br>
+                    <h4> Operators and Operations </h4>
+                    <pre>
+                        <code class="language-python">
+
+                        </code>
+                    </pre>
 
                 </div>
 
