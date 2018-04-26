@@ -82,7 +82,7 @@
                     <p> Strings are an example of a non-scalar object.</p>
                     <br>
                     <h4> Variables & comments</h4>
-                    <p>Unline C/C++, you don't have to declare the type of a variable during initialization. Python automatically understands the type of the variable.</p>
+                    <p>Unline C/C++, you don't have to declare the type of a variable during initialization. Python automatically understands the type of the variable. In python, variables are just names that are bound to objects when you initialize them. </p>
                     <pre>
                         <code class="language-python">
                             #this is a single line comment in python
@@ -103,16 +103,98 @@
                             j = True
                             j = False
                             #Another thing to notice is that, unlike C/C++, you dont have to enter a semicolon after each statement
+                            #python also allows multiple assignment
+                            i, j = 2, 3 #this is perfectly legal
+                            x, y = y, x #swaps x and y
                         </code>
                     </pre>
                     <br>
                     <h4> Operators and Operations </h4>
+                    <p>Python supports all the basic operations and some more. The operations on int and float types are shown below</p>
                     <pre>
                         <code class="language-python">
+                            i = 3
+                            j = 4.5
+                            i + j #addition
+                            i - j #subtraction
+                            i // j #integer division, meaning i will be divided by j and only the qoutinent will be returned, in this case 0
+                            i / j #normal division
+                            i % j #i modulo j
+                            i ** j #i raised to the power j, in this case (3^4.5) = 140.29...
+                            i > j #greater than operator, returns true if i is greater than j and false otherwise
+                            i < j #less than operator, returns true if i is less than j and false otherwise
+                            i == j #comparison operator, returns true if i and j are equal in type and value and false otherwise
+                            i != j #not equal opearator, returns true if i and j are not equal and false if they are equal in both type and value
+                            i >= j #greater equal operator, returns true if i is greater than or equal to j and false otherwise
+                            i <= j #less than operator, returns true if i is equal or less than j and false otherwise
+                        </code>
+                    </pre>
+                    <p> Opeartion on boolean types are shown below:</p>
+                    <pre>
+                        <code class="language-python">
+                            i = True
+                            j = False
+                            i and j #and operation
+                            i or j #or operation
+                            not a #complement operaion
+                        </code>
+                    </pre>
+                    <br>
+                    <h4> print() and input() </h4>
+                    <p> print() is a built-in function that is used to print a value to the screen. You can print strings and variables using the print() function. </p>
+                    <pre>
+                        <code class="language-python">
+                            boolVar = True
+                            floatVar = 2.345
+                            intVar = 5
+                            str = "I am Sparta!!!"
+                            print('this is a float variable:',floatVar,'and this is an integer variable:',intVar)
+                            #output: this is a float variable: 2.345 and this is an integer variable: 5
+
+                            print('this is a float variable:'+str(floatVar)+'and this is an integer variable:'+str(intVar))
+                            #output: this is a float variable:2.345and this is an integer variable:5
+
+                            #the difference is the way comma(,) and plus(+) is used in string processing
+                            #when comma(,) is used in the print statement, python automatically adds a space before and after comma
+                            #meaning, a space is added at the end of the string before the comma and another is added at the beginning
+                            #of the string after the comma
+
+                            #whereas, if you use +, python will add no spacing to the string, ans the string will be output
+                            #exactly as you wrote it
+
+                            #comma(,) also automatically typecasts all the variables in the print() to string type
+
+                            #if you run the following line:
+                            print('this is a float variable:'+floatVar+'and this is a integer variable:'+intVar)
+                            #this will create an error as plus(+) does not automatically typecast the variables inside print() statement
+
+                            print(True)
+                            #Output: True
+
+                            print(False)
+                            #Output: False
+
+                            print("hey"*3)
+                            #output heyheyhey
+                            #thus you can control how many times a string or anything inside print() is printed
+
+                            print("hey\n"*3)
+                            #outputs three "hey" with newlines, meaning, output consists of three lines each consisting of "hey"
+                            #so, you can use the escape sequences in python                            
 
                         </code>
                     </pre>
-
+                    <p>input() is for both printing a string into the screen/console and taking another input from the user. Everthing received using input() is passed as string. So, be sure to typecast the input values before using them. </p>
+                    <pre>
+                        <code class="language-python">
+                            intVar = int( input("enter a int value: ") )
+                            #notice how the return of the input is typecase to int to convert the input string into a integer
+                            
+                            intVar = int( input("") ) #this is also valid, this prints a null string in the console and takes an input
+                        </code>
+                    </pre>
+                    <br>
+                    <h4></h4>
                 </div>
 
             </div>
