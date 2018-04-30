@@ -194,7 +194,41 @@
                         </code>
                     </pre>
                     <br>
-                    <h4></h4>
+                    <h4> Branching and Indentation </h4>
+                    <p> Python forces the user to write well indented code. Unlike C/C++, python has no "code block" per se, meaning, you can't create a code block using {}. </p>
+                    <p> A code block in python is created using colon(:) after a statement and writing the statements of the code block with same level of indentation.</p>
+                    <pre>
+                        <code class="language-python">
+                            #a program to find maximum from three input numbers
+
+                            #getting the inputs from user and typecasting them to floats
+                            a = float(input("Enter a: "))
+                            b = float(input("Enter b: "))
+                            c = float(input("Enter c: "))
+
+                            #maximum will hold the maximum number in the end
+                            maximum = 0;
+
+                            #so, here a code block begins
+                            if a > b:
+                                if b > c: #if the next statement is indented to four spaces, it means the statement is part of the codeblock
+                                    maximum = a
+                                else:
+                                    if a > c:
+                                        maximum = a
+                                    else:
+                                        maximum = c
+                            else:
+                                if a > c:
+                                    maximum = b
+                                else:
+                                    if b > c:
+                                        maximum = b
+                                    else:
+                                        maximum = c
+                            print("maximum: ",maximum)
+                        </code>
+                    </pre>
                 </div>
 
             </div>
