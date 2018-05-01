@@ -158,9 +158,12 @@
                             #when comma(,) is used in the print statement, python automatically adds a space before and after comma
                             #meaning, a space is added at the end of the string before the comma and another is added at the beginning
                             #of the string after the comma
+                            #comma(,) is used for passing arguments, so when you use the comma in the print statement,you are
+                            #passing the strings and variables as arguments
 
                             #whereas, if you use +, python will add no spacing to the string, ans the string will be output
                             #exactly as you wrote it
+                            #Because, when you are using plus(+), you are concatenating the strings to form a larger string
 
                             #comma(,) also automatically typecasts all the variables in the print() to string type
 
@@ -226,9 +229,78 @@
                                         maximum = b
                                     else:
                                         maximum = c
-                            print("maximum: ",maximum)
+                            print("maximum:",maximum)
                         </code>
                     </pre>
+                    <p> So if you want a statement to be a part of a block, you have to indent the statement </p>
+                    <pre>
+                        <code class="language-python">
+                            #code for finding mimumum between three numbers
+
+                            #the input numbers
+                            a = float(input("Enter a: "))
+                            b = float(input("Enter b: "))
+                            c = float(input("Enter c: "))
+
+                            #this will finally hold the minimum number among the three
+                            minimum = 0;
+                            
+                            if a < b and a < c:
+                                minimum = a
+                            elif b < a and b < c:
+                                minimum = b
+                            else:
+                                minimum = c
+
+                            print("minimum:",minimum)
+                        </code>
+                    </pre>
+                    <br>
+                    <h4> Strings </h4>
+                    <p> Python strings are immutable meaning the unlike C/C++, you can't change the individual characters of the string once the string has been initialized. </p>
+                    <pre>
+                        <code class="language-python">
+                            string = "I am Spartaa!!!"
+
+                            #individual characters of the string can be accessed by indexing
+                            print(string[5]) #Output: S
+
+                            #negatice indice means last char in python
+                            print("i am sparta"[-1]) #Output: a
+                            print("i am sparta"[-2]) #Output: t
+
+                            string[5] = "r" #this generates an error and strings are immutable
+
+                            string = "pew pew pew" #this is totally OK, as you are just re-binding the string
+
+                            #using len() to find length of string
+                            print(len(string)) #Output: 11
+
+                            #slicing is used to extract sbstrings of specific lengths from a string
+                            string[0:len(string)] #Output: pew pew pew
+
+                            #slice(start, stop, step)
+                            #not gonna include string[stop]
+                            #bydefault step = 1
+                            #colon followed by nothing means until end or until beginning
+                            print("i am sparta"[3:]) #Output: m sparta
+
+                            s = "i am sparta"
+                            print(s[:len(s)]) #Output: i am sparta
+                            print(s[:len(s) - 1]) #Output: i am spart
+
+                            print("i am sparta"[:-1]) #Output: i am spart
+
+                            s = "i am sparta"
+                            print(s[5: 8: 2]) #Output: sa
+                            print(s[10: 5: -2]) #Output: arp
+                            print(s[::]) #Output: i am sparta
+                            print(s[::-1]) #prints the string reversely
+
+                        </code>
+                    </pre>
+                    <br>
+                    <h4> Loops </h4>
                 </div>
 
             </div>
