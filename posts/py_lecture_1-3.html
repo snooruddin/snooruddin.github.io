@@ -300,7 +300,94 @@
                         </code>
                     </pre>
                     <br>
-                    <h4> Loops </h4>
+                    <h4> Iterations </h4>
+                    <p> Python has two kind of loops: the for loop and the while loop. While, both of these loops are interchangable, meaning you can perform any tasks requiring iteration using any of the two, in some cases one is easies to implement than the other. </p>
+                    <p> <span>break</span> is one of the most used keywords with loops. Break breaks from the innermost block it is in</p>
+                    <pre>
+                        <code class="language-python">
+                            #the most common use of while loop is when you want to do something indefinitely, meaning it's mostly used to create infinite loops
+                            
+                            #a program that exits only when you enter a even number
+                            while True:
+                                x = int(input('enter an even number'));
+                                if x%2 == 0:
+                                    break;
+                            
+                            #a program that prints all the even numbers from 2 till the input range
+                            given_range = int(input('Enter the maximum range greater than 2: '))
+                            initial = 2
+                            while initial <= given_range:
+                                if initial % 2 == 0 :
+                                    print('',initial)
+                                initial += 1
+                            
+                            #although for loop is more suitable for this kinds of tasks
+
+                            #checking weather a given number is prime or not
+                            input_number = int(input('enter the number you want to check: '))
+                            #number will be used as the dividend at each iteration
+                            number = 2
+                            check_range = input_number / 2;
+                            while True:
+                                if(input_number % number == 0):
+                                    print(input_number, 'is not a prime number')
+                                    break
+                                elif (number > check_range):
+                                    print(input_number, 'is a prime number')
+                                    break
+                                number += 1
+                            
+                            
+                            #for loops on the other hand, are used to iterate over a range of numbers
+                            for i in range(15):
+                                print(i);
+                            #Output: 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14
+
+                            #here i is the variable declared inline of the for statement
+                            #automaticlly the range() function increments the variable declared inline the for statement by 1
+                            #range(int) function can only take integer values as arguments
+                            #range(start, stop, step)
+                            #by default start is 0, step is 1, stop is what you define
+                            for i in range(0, 10, 2):
+                                print(i)
+                            #Output: 0 2 4 6 8 
+                            for i in range(15, 3, -2):
+                                print(i)
+                            #Output: 15 13 11 9 7 5 
+                            #notice how the initial value(start) is in the output, but the stop value is not
+
+                            #primality test using for loop
+                            input_number = int(input('enter the number that you want to check for primality: '))
+                            #so that range considers input_number/2
+                            check_range = input_number/2 + 1
+                            is_prime = True
+                            for number in range(2, int(check_range)):
+                                if input_number % number == 0:
+                                    is_prime = False
+                                    break
+                            if is_prime:
+                                print(input_number, 'is prime')
+                            else:
+                                print(input_number,'is not prime')
+
+                            #for loop is particularly useful for anything that deals with strings
+                            #simple cheerleader program that cheers you name
+                            an_letter = "aefhilmnorsxAEFHILMNORSX"
+                            name = input('enter your name: ')
+                            #the following line works like foreach
+                            #the string is traversed and char is bound to every character in the string
+                            for char in name:
+                                #checking if the char is in the an_name string
+                                if char in an_letter:
+                                    print('Give me an',char,'!!!')
+                                else:
+                                    print('Give me a',char,'!!!')
+                            for i in range(len(name)):
+                                print(''+name+'!!!')
+                        </code>
+                    </pre>
+                    
+                    
                 </div>
 
             </div>
