@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width = device-width, initial-scale = 1">
+
+        <!-- used CDNs -->
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+        <!-- fonts section -->
+
+        <!-- for navbar -->
+        <link href='https://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
+        <!-- font-family: 'Press Start 2P', cursive; -->
+
+        <link href='https://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
+        <!-- font-family: 'Arvo', serif; -->
+        <link href='https://fonts.googleapis.com/css?family=Cutive+Mono' rel='stylesheet' type='text/css'>
+        <!-- font-family: 'Cutive Mono', monospace; -->
+
+        <!-- fonts section end -->
+
+        <!-- font-awesome -->
+        <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+
+        <!-- prism css -->
+        <link rel="stylesheet" href="../../styles/prism.css" >
+
+        <style>
+        h4
+        {
+            color: darkred;
+        }
+        span
+        {
+            color: red;
+        }
+        </style>
+
+        <link rel="stylesheet" type="text/css" href="../../styles/navbar_style.css">
+
+        <title> Requirement Analysis for Online Shop Management System </title>
+
+    </head>
+    <body>
+
+        <div class="container-fluid">
+            <div class="row" id="navrow">
+
+                <div class="col-xs-2 sidebar contentCentered">
+                    <ul id="navbar_table">
+                        <li><a href="../../index.html"> Home </a></li>
+                        <li><a href="../../pages/ramblings.html"> Ramblings </a></li>
+                        <li><a href="../../pages/projects.html"> Projects </a></li>
+                        <li><a href="../../pages/about_me.html"> About Me </a></li>
+                        <li class="button_bar"><a href="https://github.com/imad062" target="_blank"> <i class="fab fa-github"></i> </a></li>
+                        <li class="button_bar"><a href="mailto:https://nooruddinimad@gmail.com?Subject=ContactFromImadsRamblings"> <i class="fas fa-envelope-square"></i> </a></li>
+                        <li class="button_bar"><a href="https://www.facebook.com/nooruddin.imad" target="_blank"> <i class="fab fa-facebook-square"></i> </a></li>
+                    </ul>
+
+                </div>
+
+
+                <div id="displayArea" class="col-xs-10" style="font-family: monospace">
+                    <!-- write everything here -->
+                    <h4> Things This Project Must Contain </h4>
+                    <p> According to the course assignment specifications this project must contain the following things: </p>
+                    <ol>
+                        <li> Minimum 3 Tables and Maximum 5 Tables </li>
+                        <li> Standard Queries Showing Their Outputs </li>
+                        <li> Triggers </li>
+                        <li> Cursors </li>
+                        <li> Arrays </li>
+                        <li> Functions </li>
+                        <li> Procedures </li>
+                        <li> File I/0 </li>
+                    </ol>
+                    <h4> Requirements </h4>
+                    <ul>
+                        <li> Admin can set discount for all or specific type of products </li>
+                        <li> Admin can remove discount on all or specific types of products </li>
+                        <li> Admin can calculate gross sale for a month </li>
+                        <li> Admin can calculate total salary + commission to be paid to employees for a month </li>
+                        <li> Admin can pay the commission to all or specific employee any time </li>
+                        <li> Admin can get single customer or employee info </li>
+                        <li> Admin can get info of most sold products by category </li>
+                        <li> Admin can get the info of top 10 most spending customers </li>
+                        <li> Admin can get a list of products that are less than 10 available in stock </li>
+                        <li> Admin can award club points to customers </li>
+                        <li> Admin can update current shipment status of all the orders </li>
+                        <li> Admin can restock products </li>
+                        <li> All commission of an employee must be cleared before admin can delete an employee </li>
+                        <li> All commissions are automatically cleared at the beginning of a new month </li>
+                        <li> Customer can't order products that are unavailable in stock </li>
+                        <li> Customer can delete an order. </li>
+                        <li> Customer gets 5% of total order price(not including club point discount price) as club points </li>
+                        <li> Customer can use club points to buy products </li>
+                        <li> Every operation (including procedures, function calls, insertions, triggers, updates, deletions) are tracked in a table with timestamp</li>
+                        <li> Operators gets 2% commission on the total price of the order </li>
+                    </ul>
+                    
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- for prism -->
+        <script src="../../scripts/prism.js"></script>
+    </body>
+</html>

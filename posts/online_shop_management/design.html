@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width = device-width, initial-scale = 1">
+
+        <!-- used CDNs -->
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+        <!-- fonts section -->
+
+        <!-- for navbar -->
+        <link href='https://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
+        <!-- font-family: 'Press Start 2P', cursive; -->
+
+        <link href='https://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
+        <!-- font-family: 'Arvo', serif; -->
+        <link href='https://fonts.googleapis.com/css?family=Cutive+Mono' rel='stylesheet' type='text/css'>
+        <!-- font-family: 'Cutive Mono', monospace; -->
+
+        <!-- fonts section end -->
+
+        <!-- font-awesome -->
+        <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+
+        <!-- prism css -->
+        <link rel="stylesheet" href="../../styles/prism.css" >
+
+        <style>
+        h4
+        {
+            color: darkred;
+        }
+        span
+        {
+            color: red;
+        }
+        </style>
+
+        <link rel="stylesheet" type="text/css" href="../../styles/navbar_style.css">
+
+        <title> Design of Online Shop Management Database </title>
+
+    </head>
+    <body>
+
+        <div class="container-fluid">
+            <div class="row" id="navrow">
+
+                <div class="col-xs-2 sidebar contentCentered">
+                    <ul id="navbar_table">
+                        <li><a href="../../index.html"> Home </a></li>
+                        <li><a href="../../pages/ramblings.html"> Ramblings </a></li>
+                        <li><a href="../../pages/projects.html"> Projects </a></li>
+                        <li><a href="../../pages/about_me.html"> About Me </a></li>
+                        <li class="button_bar"><a href="https://github.com/imad062" target="_blank"> <i class="fab fa-github"></i> </a></li>
+                        <li class="button_bar"><a href="mailto:https://nooruddinimad@gmail.com?Subject=ContactFromImadsRamblings"> <i class="fas fa-envelope-square"></i> </a></li>
+                        <li class="button_bar"><a href="https://www.facebook.com/nooruddin.imad" target="_blank"> <i class="fab fa-facebook-square"></i> </a></li>
+                    </ul>
+
+                </div>
+
+
+                <div id="displayArea" class="col-xs-10" style="font-family: monospace">
+                    <!-- write everything here -->
+                    <h4> Tables </h4>
+                    <p> So, The database will contain 6 tables. The tables are: </p>
+                    <ul>
+                        <li> <span>Customers</span> : contains id, name, location, contact, club points and total spent. Id is the primary key. Contact must be unique. </li>
+                        <li> <span>Employees</span> : contains id, name, location, contact, position, salary and commission. Id is the primary key. Contact must be unique. </li>
+                        <li> <span>Products</span> : contains id, name, manufacturer, type, subtype, price, quantity in stock and total quantity sold so far(from the beginning of company). Id is the primary key. </li>
+                        <li> <span>Orders</span> : contains id, customer id, employee id, product id, quantity and total price. Id is the primary key. </li>
+                        <li> <span>OrderDetails</span> : contains order id, order date, possible shipping date(automatically three days from order date), shipment status. Order id is both the primary key and foreign key. Order id references from id of Orders table.</li>
+                        <li> <span>Log</span> : contains logDate, logFrom(whether logging from trigger, procedure, function etc) and logMsg. This table is completely disassociated from other tables as this table is created for debugging and logging purposes. </li>
+                    </ul>
+                    <p>A schema using the free database designer tool from <a href="http://www.dbdesigner.net">dbDesigner</a> is presented below: </p>
+                    <img src="../../images/online_shop_management_schema.png" title="Online Shop Management Schema Diagram"> 
+                    <h4> Design decisions for the requirements </h4>
+                    <p> So, the main idea here is to take decisions about whether procedures or functions will be used to implement the various requirements. The requirements will also be discussed extensively. </p>
+                    <ol> 
+                        <li> <span>  </span> </li>
+                    </ol>
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- for prism -->
+        <script src="../../scripts/prism.js"></script>
+    </body>
+</html>

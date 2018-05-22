@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width = device-width, initial-scale = 1">
+
+        <!-- used CDNs -->
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+        <!-- fonts section -->
+
+        <!-- for navbar -->
+        <link href='https://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
+        <!-- font-family: 'Press Start 2P', cursive; -->
+
+        <link href='https://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
+        <!-- font-family: 'Arvo', serif; -->
+        <link href='https://fonts.googleapis.com/css?family=Cutive+Mono' rel='stylesheet' type='text/css'>
+        <!-- font-family: 'Cutive Mono', monospace; -->
+
+        <!-- fonts section end -->
+
+        <!-- font-awesome -->
+        <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+
+        <!-- prism css -->
+        <link rel="stylesheet" href="../../styles/prism.css" >
+
+        <style>
+        h4
+        {
+            color: darkred;
+        }
+        span
+        {
+            color: red;
+        }
+        </style>
+
+        <link rel="stylesheet" type="text/css" href="../../styles/navbar_style.css">
+
+        <title> Implementation : Creating the tables </title>
+
+    </head>
+    <body>
+
+        <div class="container-fluid">
+            <div class="row" id="navrow">
+
+                <div class="col-xs-2 sidebar contentCentered">
+                    <ul id="navbar_table">
+                        <li><a href="../../index.html"> Home </a></li>
+                        <li><a href="../../pages/ramblings.html"> Ramblings </a></li>
+                        <li><a href="../../pages/projects.html"> Projects </a></li>
+                        <li><a href="../../pages/about_me.html"> About Me </a></li>
+                        <li class="button_bar"><a href="https://github.com/imad062" target="_blank"> <i class="fab fa-github"></i> </a></li>
+                        <li class="button_bar"><a href="mailto:https://nooruddinimad@gmail.com?Subject=ContactFromImadsRamblings"> <i class="fas fa-envelope-square"></i> </a></li>
+                        <li class="button_bar"><a href="https://www.facebook.com/nooruddin.imad" target="_blank"> <i class="fab fa-facebook-square"></i> </a></li>
+                    </ul>
+
+                </div>
+
+
+                <div id="displayArea" class="col-xs-10" style="font-family: monospace">
+                    <!-- write everything here -->
+                    <p> In the design section, we outlined the tables necessary for the system. We also specified the primary and foreign keys for the system. So, Creating the tables is now just transforming those ideas into sql commands. </p>
+                    <pre>
+                        <code class="language-sql">
+                            --unComment all of these if you are having issues with creating the tables
+                            --DROP TABLE ORDERDETAILS;
+                            --DROP TABLE ORDERS;
+                            --DROP TABLE CUSTOMERS;
+                            --DROP TABLE EMPLOYEES;
+                            --DROP TABLE PRODUCTS;
+                            --DROP TABLE LOG;
+
+                            CREATE TABLE Customers
+                            (   id INTEGER
+                            ,   name VARCHAR(200) NOT NULL
+                            ,   location VARCHAR(1000) NOT NULL
+                            ,   contact NUMBER(11) NOT NULL UNIQUE
+                            ,   clubPoints NUMBER(9,2) DEFAULT 0
+                            ,   totalSpent NUMBER(9,2) DEFAULT 0
+
+                            ,   PRIMARY KEY(id)
+                            );
+
+                            CREATE TABLE Employees
+                            (   id INTEGER
+                            ,   name VARCHAR(200)
+                            ,   location VARCHAR(1000)
+                            ,   contact NUMBER(11) NOT NULL UNIQUE
+                            ,   position VARCHAR(100) NOT NULL
+                            ,   salary NUMBER(9,2) DEFAULT 0
+                            ,   commission NUMBER(9,2) DEFAULT 0
+
+                            ,   PRIMARY KEY(id)
+                            );
+
+                            CREATE TABLE Products
+                            (   id INTEGER
+                            ,   name VARCHAR(200) NOT NULL
+                            ,   manufacturer VARCHAR(200) NOT NULL
+                            ,   type VARCHAR(200) NOT NULL
+                            ,   subtype VARCHAR(200) NOT NULL
+                            ,   price NUMBER(9,2) NOT NULL CHECK(price >= 0)
+                            ,   quantityInStock INTEGER CHECK(quantityInStock >= 0)
+                            ,   totalQuantitySold INTEGER DEFAULT 0
+
+                            ,   PRIMARY KEY(id)
+                            );
+
+                            CREATE TABLE Orders
+                            (   id INTEGER
+                            ,   cid INTEGER
+                            ,   eid INTEGER
+                            ,   pid INTEGER
+                            ,   quantity INTEGER CHECK(quantity > 0)
+                            ,   totalPrice NUMBER(9,2) CHECK(totalPrice > 0)
+                                
+                            ,   PRIMARY KEY(id)
+                            ,   FOREIGN KEY(cid) REFERENCES customers(id)
+                            ,   FOREIGN KEY(eid) REFERENCES employees(id)
+                            ,   FOREIGN key(pid) REFERENCES products(id)
+                            );
+
+                            CREATE TABLE OrderDetails
+                            (   id INTEGER
+                            ,   orderDate DATE NOT NULL
+                            ,   shipmentDate DATE NOT NULL
+                            ,   shipmentStatus varchar(100) DEFAULT 'PROCESSING'
+
+                            ,   PRIMARY KEY(id)
+                            ,   FOREIGN KEY(id) REFERENCES orders(id)
+                            );
+
+                            CREATE TABLE Log
+                            (   logDate DATE NOT NULL
+                            ,   logFrom VARCHAR(500) NOT NULL
+                            ,   logMsg  VARCHAR(1000) NOT NULL
+                            );
+                        </code>
+                    </pre>
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- for prism -->
+        <script src="../../scripts/prism.js"></script>
+    </body>
+</html>
