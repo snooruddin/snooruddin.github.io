@@ -123,6 +123,7 @@
                             ,   eid INTEGER
                             ,   pid INTEGER
                             ,   quantity INTEGER CHECK(quantity > 0)
+                            ,   clubPointsUsed NUMBER(9,2)
                             ,   totalPrice NUMBER(9,2) CHECK(totalPrice > 0)
                                 
                             ,   PRIMARY KEY(id)
