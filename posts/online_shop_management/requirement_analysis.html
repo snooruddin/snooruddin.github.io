@@ -95,15 +95,20 @@
                         <li> Admin can get a list of products that are less than 10 available in stock </li>
                         <li> Admin can award club points to customers </li>
                         <li> Admin can update current shipment status of all the orders </li>
-                        <li> Admin can restock products </li>
-                        <li> All commission of an employee must be cleared before admin can delete an employee </li>
-                        <li> All commissions are automatically cleared at the beginning of a new month </li>
+                        <li> Admin can restock all or specific products </li>
                         <li> Customer can't order products that are unavailable in stock </li>
                         <li> Customer can delete an order. </li>
                         <li> Customer gets 5% of total order price(not including club point discount price) as club points </li>
                         <li> Customer can use club points to buy products </li>
-                        <li> Every operation (including procedures, function calls, insertions, triggers, updates, deletions) are tracked in a table with timestamp</li>
-                        <li> Operators gets 2% commission on the total price of the order </li>
+                        <li> Every operation (including procedures, function calls, triggers, updates, deletions) are tracked in a table with date </li>
+                        <li> Operators get 2% commission on the total price of the order </li>
+                        <li> Total price of a order is automatically calculated </li>
+                        <li> Only operators can permit a order </li>
+                        <li> Customers actual payment is automatically calculated </li>
+                        <li> Quantity of products in stock after each order automatically decreases </li>
+                        <li> Total quantity sold of a product increases after every order </li>
+                        <li> Customer's total spent money increases after every order </li>
+                        <li> Order details will be automatically filled out </li>
                     </ul>
                     
                 </div>
