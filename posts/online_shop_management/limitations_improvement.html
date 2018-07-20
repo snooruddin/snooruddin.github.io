@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width = device-width, initial-scale = 1">
+
+        <!-- used CDNs -->
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+        <!-- fonts section -->
+
+        <!-- for navbar -->
+        <link href='https://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
+        <!-- font-family: 'Press Start 2P', cursive; -->
+
+        <link href='https://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
+        <!-- font-family: 'Arvo', serif; -->
+        <link href='https://fonts.googleapis.com/css?family=Cutive+Mono' rel='stylesheet' type='text/css'>
+        <!-- font-family: 'Cutive Mono', monospace; -->
+
+        <!-- fonts section end -->
+
+        <!-- font-awesome -->
+        <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+
+        <!-- prism css -->
+        <link rel="stylesheet" href="../../styles/prism.css" >
+
+        <style>
+        h4
+        {
+            color: darkred;
+        }
+        span
+        {
+            color: red;
+        }
+        </style>
+
+        <link rel="stylesheet" type="text/css" href="../../styles/navbar_style.css">
+
+        <title> Limitations and Improvement of Online Shop Management Project </title>
+
+    </head>
+    <body>
+
+        <div class="container-fluid">
+            <div class="row" id="navrow">
+
+                <div class="col-xs-2 sidebar contentCentered">
+                    <ul id="navbar_table">
+                        <li><a href="../../index.html"> Home </a></li>
+                        <li><a href="../../pages/ramblings.html"> Ramblings </a></li>
+                        <li><a href="../../pages/projects.html"> Projects </a></li>
+                        <li><a href="../../pages/about_me.html"> About Me </a></li>
+                        <li class="button_bar"><a href="https://github.com/imad062" target="_blank"> <i class="fab fa-github"></i> </a></li>
+                        <li class="button_bar"><a href="mailto:https://nooruddinimad@gmail.com?Subject=ContactFromImadsRamblings"> <i class="fas fa-envelope-square"></i> </a></li>
+                        <li class="button_bar"><a href="https://www.facebook.com/nooruddin.imad" target="_blank"> <i class="fab fa-facebook-square"></i> </a></li>
+                    </ul>
+
+                </div>
+
+
+                <div id="displayArea" class="col-xs-10" style="font-family: monospace">
+                    <!-- write everything here -->
+                    <h4> Limitations </h4>
+                    <p> Naturally, a CRUD application for online shop management system is more complex than this. But my course requires a maximum of 5 tables. So, I was forced to constraint myself on only those 5 tables. </p>
+                    <h4> Scope of Improvement </h4>
+                    <p> In database theory, there is a topic named "normalization". By applying normalization to your tables, you can understand weather your design is good or bad. If your design is bad, you can normalize your database and make it a good design. By applying the nomalizations : 1NF, 2NF, 3NF, BCNF, 4NF , you can methodically turn your bad design into good design. You also need to know another idea named "Functional Dependencies". Functional Dependencies can help you figure out which attributes are "super key" for your database system. From the beginning I should have found out the functional dependencies and used normalizations to create smaller relations from much larger parent relation. That way, I could have been sure that my design was good. </p>
+                    <p> At first I thought that "cart" was missing. Then I understood that the orders and orderDetails are actually working as "cart". There might be more functions and procedures and triggers whose idea didn't come to my mind. If you get new ideas, you can easily implement them.  </p>
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- for prism -->
+        <script src="../../scripts/prism.js"></script>
+    </body>
+</html>

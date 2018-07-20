@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width = device-width, initial-scale = 1">
+
+        <!-- used CDNs -->
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+        <!-- fonts section -->
+
+        <!-- for navbar -->
+        <link href='https://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
+        <!-- font-family: 'Press Start 2P', cursive; -->
+
+        <link href='https://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
+        <!-- font-family: 'Arvo', serif; -->
+        <link href='https://fonts.googleapis.com/css?family=Cutive+Mono' rel='stylesheet' type='text/css'>
+        <!-- font-family: 'Cutive Mono', monospace; -->
+
+        <!-- fonts section end -->
+
+        <!-- font-awesome -->
+        <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+
+        <!-- prism css -->
+        <link rel="stylesheet" href="../../styles/prism.css" >
+
+        <style>
+        h4
+        {
+            color: darkred;
+        }
+        span
+        {
+            color: red;
+        }
+        </style>
+
+        <link rel="stylesheet" type="text/css" href="../../styles/navbar_style.css">
+
+        <title> Testing Online Shop Management Database </title>
+ 
+    </head>
+    <body>
+
+        <div class="container-fluid">
+            <div class="row" id="navrow">
+
+                <div class="col-xs-2 sidebar contentCentered">
+                    <ul id="navbar_table">
+                        <li><a href="../../index.html"> Home </a></li>
+                        <li><a href="../../pages/ramblings.html"> Ramblings </a></li>
+                        <li><a href="../../pages/projects.html"> Projects </a></li>
+                        <li><a href="../../pages/about_me.html"> About Me </a></li>
+                        <li class="button_bar"><a href="https://github.com/imad062" target="_blank"> <i class="fab fa-github"></i> </a></li>
+                        <li class="button_bar"><a href="mailto:https://nooruddinimad@gmail.com?Subject=ContactFromImadsRamblings"> <i class="fas fa-envelope-square"></i> </a></li>
+                        <li class="button_bar"><a href="https://www.facebook.com/nooruddin.imad" target="_blank"> <i class="fab fa-facebook-square"></i> </a></li>
+                    </ul>
+
+                </div>
+
+
+                <div id="displayArea" class="col-xs-10" style="font-family: monospace">
+                    <!-- write everything here -->
+                    <h4> Testing The Insertions </h4>
+                    <p> Testing the insertions in pretty easy. If you are using TOAD, you can use the run script button on the navigation bar. But You can also run a file in the using the "<span>Run SQL Command Line</span>" application. To run the file in the command line: </p>
+                    <ol>
+                        <li> <p>Login to your user account in the command line app</p> </li>
+                        <li> <p> Enter the character '@' into the command line and then drag and drop your file to the command window.</p>
+                            <pre>
+                                <code class="language-sql">
+                                    @ 'your_file_path_here';
+                                </code>
+                            </pre>
+                            <p> If you press enter then, the entire file will be run. </p>
+                        </li>
+                    </ol>
+                    <h4> Testing the functions and procedures </h4>
+                    <p> There are two kinds of blocks in PL/SQL: </p>
+                    <ol>
+                        <li> <p> <b>Named Block :</b> As the name suggests, named blocks have names. As Oracle uses a client-server architecture, the named blocks are sent to the server. The server tests the named block for errors, saves the block and assigns a pointer to the memory location of the block statements to the name of the block. The server checks the named block only the first time the block is sent unless you make changes to the internal statements of the named block later. If you don't change the internal statements of your named block later, when you request your client for running the named blocks by envoking their names, the server only runs the statements on the memory location assigned to that name. </p> </li>
+                        <li> <p> <b>Unnamed Block:</b> Unnamed blocks are sent everytime to the server as you invoke them. The server checks them each time for errors and then runs them. </p> </li>
+                    </ol>
+                    <p> We normally test the procedures and functions using unnamed blocks. The structure of an unnamed block is as follows : </p>
+                    <pre>
+                        <code class="language-sql">
+                            DECLARE
+                                --declare the variables you want to use in this unnamed block
+                            BEGIN
+                                --write your statements here
+                            END
+                        </code>
+                    </pre>
+                    <b>Testing a function : getUnderstockedProducts</b>
+                    <pre>
+                        <code class="language-sql">
+                            SET SERVEROUTPUT ON;
+                            DECLARE
+                                totalNum NUMBER;
+                            BEGIN
+                                --calling the function
+                                totalNum := getUnderstockedProducts;
+                                DBMS_OUTPUT.PUT_LINE('Total Understocked Product : ' || totalNum);
+                            END;
+                        </code>
+                    </pre>
+                    <b>Testing a Procedure : awardClubPointsToAllCustomers</b>
+                    <pre>
+                        <code class="language-sql">
+                            SET SERVEROUTPUT ON;
+                            DECLARE
+                                awardAmnt NUMBER;
+                                ttlAwarded INTEGER;
+                            BEGIN
+                                --calling the procedure
+                                --notice how we are providing the output parameter too
+                                awardClubPointsToAllCustomers(awardAmnt, ttlAwarded);
+
+                                --the output parameter passed to the procedure will contain the data intended to be the output
+                                dbms_output.PUT_LINE('Total Awarded To : ' || ttlAwarded);
+                            END;
+                        </code>
+                    </pre>
+                    <br>
+                    <h4> Testing Triggers </h4>
+                    <p> Testing triggers are easy. After you successfully execute the trigger without any errors or warnings, you insert data to the table related to that trigger. Then check whether the trigger has done what it was supposed to do. </p>
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- for prism -->
+        <script src="../../scripts/prism.js"></script>
+    </body>
+</html>
